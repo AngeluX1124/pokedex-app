@@ -14,7 +14,7 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'detail-pokemon/:id',
+    path: 'detail-pokemon',
     loadComponent: () =>
       import('./pages/detail-pokemon/detail-pokemon.page').then(
         (m) => m.DetailPokemonPage
