@@ -14,10 +14,16 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'detail-pokemon',
+    // AQUI ESTA EL CAMBIO PRINCIPAL (/:id)
+    path: 'detail-pokemon/:id',
     loadComponent: () =>
       import('./pages/detail-pokemon/detail-pokemon.page').then(
         (m) => m.DetailPokemonPage
       ),
   },
+  {
+    path: '**',
+    redirectTo: 'list-pokemon',
+    pathMatch: 'full',
+  }
 ];

@@ -1,0 +1,46 @@
+ion-grid {
+  padding: 12px 16px;
+}
+
+.border-bottom {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 18px;
+  margin-bottom: 12px;
+  padding: 8px 4px;
+  transition: transform 0.15s ease, background 0.15s ease;
+
+  &:active {
+    transform: scale(0.98);
+    background: var(--app-surface-2);
+  }
+
+  // sprite
+  ion-col:first-child ion-img {
+    background: var(--app-surface-2);
+    border-radius: 14px;
+    padding: 6px;
+  }
+
+  // nombre
+  ion-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+}
+// Controla el tamaño de las etiquetas de tipo (Planta, Veneno, Fuego, etc.)
+ion-col[size="2"] ion-img {
+  width: 65px;
+  max-width: 100%;
+  margin: 0 auto;
+  image-rendering: pixelated;
+}
+
+// Mantiene proporcionado el sprite del Pokémon en pantallas grandes
+ion-col[size="3"] ion-img {
+  width: 85px;
+  max-width: 100%;
+  margin: 0 auto;
+  image-rendering: pixelated;
+}
